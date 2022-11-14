@@ -1,0 +1,56 @@
+.target{
+  width: 200px;
+  height: 350px;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imgBox{
+  width: 220px;
+  height: 200px;
+  overflow: hidden;
+ }
+
+.image{
+  width: 100%;
+}
+
+.txth2{
+  font-family: sans-serif;
+  text-align: left;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 300;
+
+  &--p{
+    font-size: 26px;
+    font-weight: 700;
+    margin: 20px 0px 10px 0px;
+  }
+  &--h3{
+    font-size: 15px;
+    color: rgb(137, 137, 137);
+  }
+}
+
+.buttonBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars{
+  margin-top: 6px;
+}
+
+.btn{
+  width: 80px;
+  border-radius: 5px;
+  border: solid 1px #8fbef7;
+  background-color: white;
+  color: #1c61bc;
+}

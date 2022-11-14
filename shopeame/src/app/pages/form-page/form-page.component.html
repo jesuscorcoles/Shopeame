@@ -1,0 +1,43 @@
+<div class="formBox">
+
+  <h1 class="h1">Creación/Edición de productos</h1>
+
+  <div class="genBox">
+
+    <form class="caja" [formGroup]="registerForm" (ngSubmit)="submit()">
+      <h4 class="titles">Nombre del Producto</h4>
+      <input placeholder=" Por ej: Tiesto para planta" class="campos" type="text" formControlName="name">
+      <span *ngIf="isSubmit && registerForm.controls['name'].errors && registerForm.controls['name'].errors['required']">Minimo 3 caracteres</span>
+
+      <h4 class="titles">Precio</h4>
+      <input placeholder="Por ej: 9.50" class="campos" type="text" formControlName="price">
+      <span *ngIf="isSubmit && registerForm.controls['price'].errors && registerForm.controls['price'].errors['required']">Requerido</span>
+
+      <h4 class="titles">Descripción</h4>
+      <input placeholder="Por ej: Lo más vendido" class="campos" type="text" formControlName="description">
+      <span *ngIf="isSubmit && registerForm.controls['description'].errors && registerForm.controls['description'].errors['required']">Requerido</span>
+
+      <h4 class="titles">Imagen</h4>
+      <input placeholder="Por ej: http://blabla.com/img.jpg" class="campos" type="text" formControlName="routeImg">
+      <span *ngIf="isSubmit && registerForm.controls['routeImg'].errors && registerForm.controls['routeImg'].errors['required']">Requerido</span>
+
+      <h4 class="titles">Opiniones</h4>
+      <input placeholder="Por ej: 4.28" class="campos" type="text" formControlName="opinions">
+      <span *ngIf="isSubmit && registerForm.controls['opinions'].errors && registerForm.controls['opinions'].errors['required']">Requerido</span>
+
+      <div class="btnbox">
+      <button class="btn">Guardar</button>
+      </div>
+
+    </form>
+
+    <div class="line"></div>
+
+    <div class="preview">
+      <p class="titles">Preview de producto</p>
+      <app-gallery></app-gallery>
+    </div>
+
+  </div>
+
+</div>
